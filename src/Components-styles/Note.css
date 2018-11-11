@@ -1,0 +1,25 @@
+.Note {
+    color: #88b48a;
+}
+.Note:hover {
+    color: #568b7c;
+    text-decoration: line-through;
+}
+
+.Note span {
+    margin-left: 10px;
+}
+
+.Note:hover svg {
+    animation: App-logo-spin infinite 2s linear;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

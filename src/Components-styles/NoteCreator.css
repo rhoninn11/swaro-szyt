@@ -1,0 +1,36 @@
+.NoteCreator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: stretch;
+    width: 100%;
+}
+
+.NoteCreator-input {
+    background: none;
+    border: none;
+    border-bottom: solid 2px;
+    padding: 5px;
+    width: 100%;
+    color: aliceblue;
+
+}
+
+.NoteCreator-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+    background-color: rgba(54, 75, 105, 0.5);
+    color: aliceblue;
+    box-shadow: 5px 5px 5px 1px #132441;
+    transition: box-shadow 0.2s, background 0.1s;
+}
+
+.NoteCreator-button:hover {
+    box-shadow: 10px 10px 7px 0.1px #132441;
+    background-color: rgba(60, 81, 109, 0.5);
+}

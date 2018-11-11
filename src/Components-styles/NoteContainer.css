@@ -1,0 +1,14 @@
+.NoteContainer{
+    border-radius: 20px;
+    color: #839bc4;
+    background: #475368;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-height: 50vh;
+    padding: 30px;
+    width: 50%;
+    
+    
+}

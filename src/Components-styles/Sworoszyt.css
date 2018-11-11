@@ -1,0 +1,26 @@
+.Sworoszyt{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: left 0.5s;
+    overflow-y: scroll;
+}
+
+.Sworoszyt-show{
+    left: 0;
+}
+
+.Sworoszyt-hide{
+    left: 100vw;
+}
+
+.Sworoszyt-container{
+    display: flex;
+    flex-direction: column;
+    background: hsl(60, 23%, 70%);
+    padding-top: 6vh; 
+    padding-bottom: 6vh; 
+    padding-left: 6vw; 
+    padding-right: 6vw; 
+}

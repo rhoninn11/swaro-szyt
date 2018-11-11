@@ -1,0 +1,18 @@
+.MenuOption{
+    background: rgb(21, 65, 105);
+    height: 2em;
+    width: 10em;
+    margin: 0.1em;
+    transition: width 0.5s;
+    text-align: start;
+    padding: 10px;
+    border-radius: 1em;
+    background: hsl(40, 40%, 70%);
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+
+}
+.MenuOption:hover{
+    width: 12em;
+}
