@@ -15,7 +15,14 @@ function NoteContainer(props) {
         <Subscribe to={[SworoszytDataContainer]}>
             {sworoszyt => (
                 <div className={'NoteContainer'}>
-                    {sworoszyt.state.notes.map((note, idx) => <Note value={note.text} key={idx} />)}
+                    {sworoszyt.state.notes.map((note, idx) => (
+                        <Note
+                            value={note.text}
+                            done={note.done}
+                            key={idx}
+                            onMarkAsDone={() => sworoszyt.markNoteAsDone(idx)} 
+                        />
+                    ))}
                     <NoteCreator />
                 </div>
             )}

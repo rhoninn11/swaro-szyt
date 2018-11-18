@@ -13,7 +13,7 @@ export default function NoteCreator(props) {
             <Subscribe to={[SworoszytDataContainer]}>
                 {sworoszyt => (
                     <div className={'NoteCreator'}>
-                        <input className={'NoteCreator-input'} type="text" value={sworoszyt.state.newNote} onChange={sworoszyt.handleNewNoteInput} />
+                        <input className={'NoteCreator-input'} type="text" value={sworoszyt.state.newNote} onChange={sworoszyt.handleNewNoteInput} placeholder={'Add note'}/>
                         <span className={'NoteCreator-button'} onClick={() => sworoszyt.addNote()}><FontAwesomeIcon icon={faPlus}/></span>
                     </div>
                 )}

@@ -23,4 +23,5 @@
     padding-bottom: 6vh; 
     padding-left: 6vw; 
     padding-right: 6vw; 
+    min-height: 100vh;
 }

@@ -24,17 +24,38 @@ export class SworoszytDataContainer extends Container {
     LoadState() {
         return JSON.parse(localStorage.getItem('sworoszyt'));
     }
+    
+    CheckNote(state, id) {
+        return {
+            notes: state.notes.update(id, n => {
+                return {
+                    text: n.text,
+                    done: !n.done
+                };
+            })
+        };
+    }
+
+    handleNewNoteInput = (e) => this.setState({ newNote: e.target.value })
 
     addNote = async () => {
-        await this.setState({
-            notes: this.state.notes.push({
-                text: this.state.newNote,
-                done: false
-            }),
-            newNote: ''
+        if (this.state.newNote !== ''){
+            await this.setState({
+                notes: this.state.notes.push({
+                    text: this.state.newNote,
+                    done: false
+                }),
+                newNote: ''
+            });
+            this.SaveState();
+        }
+    }
+
+    markNoteAsDone = async (id) => {
+        await this.setState(state => {
+            return this.CheckNote(state, id);
         });
         this.SaveState();
     }
 
-    handleNewNoteInput = (e) => this.setState({ newNote: e.target.value })
 }

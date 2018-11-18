@@ -1,17 +1,41 @@
 .Note {
     color: #88b48a;
+    display: inline-flex;
+    float: right;
+    text-align: start;
+    width: 100%;
 }
+
 .Note:hover {
     color: #568b7c;
+
+}
+
+.Note-done {
     text-decoration: line-through;
+    color: #5b6e5c;
 }
 
-.Note span {
+
+.Note-text {
     margin-left: 10px;
+    word-wrap: break-word;
+    justify-self: left;
+    width: 80%;
+    margin-right: auto;
 }
 
-.Note:hover svg {
-    animation: App-logo-spin infinite 2s linear;
+.Note-delete {
+    display: flex;
+    align-self: flex-start;
+}
+
+.Note-delete svg{
+    margin: 2px;
+}
+
+.Note-delete svg:hover{
+    color: #b89f72;
 }
 
 @keyframes App-logo-spin {

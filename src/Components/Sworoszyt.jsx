@@ -3,7 +3,6 @@ import { Provider } from 'unstated';
 
 import '../Components-styles/Sworoszyt.css'
 
-import NoteCreator from './NoteCreator.jsx';
 import NoteContainer from './NoteContainer.jsx';
 
 import { SworoszytDataContainer } from '../state/SworoszytDataContainer.jsx';
