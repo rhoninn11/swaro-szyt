@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
 
-import '../Components-styles/Square.css'
 
+const SquareButton = styled.button`
+    background: #465e75;
+    color: #fff;
+    display: flex;
+    min-height: 3em;
+    min-width: 3em;
+`
+
+const ButtonContent = styled.span`
+    margin: auto;
+`
 
 class Square extends Component {
 
     render() {
         return (
-            <button
-                className="Square"
-                onClick={() => this.props.onClick()}
-            >
-                {this.props.value}
-            </button>
+            <SquareButton onClick={() => this.props.onClick()}>
+                <ButtonContent>{this.props.value}</ButtonContent>
+            </SquareButton>
         );
     }
 }

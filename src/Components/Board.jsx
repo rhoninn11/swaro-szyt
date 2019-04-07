@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
+
 import Square from './Square.jsx';
+
+const BoardWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const Row = styled.div`display: flex;`
+
 
 class Board extends Component {
     constructor(props) {
@@ -10,23 +20,23 @@ class Board extends Component {
     }
     render() {
         return (
-            <div className="Board">
-                <div className="Board-row">
+            <BoardWrapper>
+                <Row>
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
                     {this.renderSquare(2)}
-                </div>
-                <div className="Board-row">
+                </Row>
+                <Row>
                     {this.renderSquare(3)}
                     {this.renderSquare(4)}
                     {this.renderSquare(5)}
-                </div>
-                <div className="Board-row">
+                </Row>
+                <Row>
                     {this.renderSquare(6)}
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
-                </div>
-            </div>
+                </Row>
+            </BoardWrapper>
         );
     }
 
@@ -41,7 +51,7 @@ class Board extends Component {
 
     handleClick(i) {
         const squares = this.state.board.slice();
-        squares[i] = (squares[i] === 'x') ? 'o':'x'
+        squares[i] = (squares[i] === 'x') ? 'o' : 'x'
         this.setState({ board: squares })
     }
 }
